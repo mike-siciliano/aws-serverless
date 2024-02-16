@@ -70,4 +70,4 @@ Contributions to this project are not accepted as it is provided for demonstrati
 
 ## License
 
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the ISC License - see the [LICENSE](LICENSE.md) file for details.
