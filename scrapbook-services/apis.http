@@ -1,0 +1,49 @@
+### This uses the VS Code extension REST Client by Huachao Mao 
+### to make REST calls to the API
+
+### TODO REMOVE
+@url = https://ebbrz6pol4.execute-api.us-east-1.amazonaws.com/prod/
+
+### TODO REMOVE
+@authToken = eyJraWQiOiJiblpQcTFjK0RBb3BvSFRKVnpCa0JVU1VlbHZxd25KcmpoczU4dnhXakcwPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxZGE1YTc4ZC1lZDg5LTQ1YTUtOWNmOS0yNjAyNzRmZDRlMDkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV83QXZQM3JjNzAiLCJjb2duaXRvOnVzZXJuYW1lIjoiZmlyc3RfdXNlciIsIm9yaWdpbl9qdGkiOiJkOWVkNTZiYi04MWE2LTQwYzgtYTVkZC1hZWZiZTJiOGJjYzUiLCJhdWQiOiIzMXEzMmhoNmdraTg4MXRwaG5tdmwwbTBpayIsImV2ZW50X2lkIjoiMGZlOTgyZDEtM2U1Yy00NmMwLTgyZWItNjIyOGIyYThiNGU3IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MDc2OTAwNDIsImV4cCI6MTcwNzY5MzY0MiwiaWF0IjoxNzA3NjkwMDQyLCJqdGkiOiI4YzNiODJhMy1lMDFiLTRlN2EtODg2YS1mNmM1ZmZkZDAzYTEiLCJlbWFpbCI6ImZpcnN0X3VzZXJAZm9vLmNvbSJ9.bOYdUO5UPYA6qTAwuciWY3Il_8W_CqSXCdIfNn8POp6SN5XvKZGi-Pb_GWDfVE_PDIsyOw1EZgeZcpJWULBeuxsr5nqGBQnSjV1S5AKPEoha1oJPUMznEWulPMZQU_eLKC_4vIM7-LzfvN05TYKDurR1yKB2cOlu9X73F9R3ul9cQBgQNeUgJJLW_LPEKxJgyrLwB0TNTmsT3GWrqEoSqSpF4STQKunUqxyschOrvMLy_2bA-Kux9H3EZhrVUVgbzQPSTIU4xwmiDg4TZZmEiPNP620Gl3MXsmwXix37jkrjVzzKv9AHychhbiRfSN3fPl2DsAq_qp8v3rBnsLnSnQ
+
+
+## List Scrapbook Entries
+GET {{url}}/scrapbook
+Authorization: {{authToken}}
+###
+
+## Get Scrapbook Entry
+GET {{url}}/scrapbook/030d18ce-479d-47a6-bd20-8baf8f14e6b6
+Authorization: {{authToken}}
+###
+
+## Create Scrapbook Entry
+POST  {{url}}/scrapbook
+Authorization: {{authToken}}
+Content-Type: application/json
+
+{
+  "name": "Macabuca Bar & Grill",
+  "location": "West Bay, Cayman Islands"
+}
+###
+
+## Modify Scrapbook Entry
+PUT {{url}}/scrapbook/030d18ce-479d-47a6-bd20-8baf8f14e6b6
+Authorization: {{authToken}}
+Content-Type: application/json
+
+ {
+    "location": "Foo bar 22",
+    "description": "Foo bar 22",
+    "id": "030d18ce-479d-47a6-bd20-8baf8f14e6b6",
+    "name": "Foo bar 22",
+    "favorite": true
+  }
+###
+
+## Delete Scrapbook Entry
+DELETE {{url}}/scrapbook/37f68adf-fad3-44d0-bcde-3b165b478ac3
+Authorization: {{authToken}}
+###

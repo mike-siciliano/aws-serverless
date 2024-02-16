@@ -1,0 +1,35 @@
+{
+  "name": "scrapbook-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "synth": "cdk synth",
+      "deploy-services": "cdk deploy DataStack LambdaStack AuthStack ApiStack --outputs-file cfn-outputs.json",
+      "deploy-ui": "cdk deploy UiDeploymentStack --outputs-file cfn-ui-outputs.json",
+      "deploy": "npm run deploy-services && npm run deploy-ui",
+      "destroy": "cdk destroy --all"
+  },
+  "keywords": [],
+  "author": "Michael Siciliano",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.126",
+    "@types/node": "^20.8.9",
+    "aws-cdk": "^2.102.0",
+    "aws-cdk-lib": "^2.102.0",
+    "constructs": "^10.3.0",
+    "esbuild": "^0.19.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@aws-amplify/auth": "^6.0.9",
+    "@aws-sdk/client-cognito-identity": "^3.489.0",
+    "@aws-sdk/client-dynamodb": "^3.454.0",
+    "@aws-sdk/client-s3": "^3.445.0",
+    "@aws-sdk/credential-providers": "^3.489.0",
+    "@aws-sdk/lib-dynamodb": "^3.474.0",
+    "aws-amplify": "^6.0.9"
+  }
+}

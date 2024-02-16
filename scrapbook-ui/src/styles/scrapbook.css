@@ -1,0 +1,54 @@
+.scrapbook-entry {
+  display: inline-block;
+  width: 350px;
+  margin: 5px;
+  padding: 4px;
+  overflow: auto;
+}
+
+.scrapbook-image {
+    width:  100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.name {
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(43, 159, 226);
+  font-weight: 900;
+}
+
+.location {
+  font-weight: 900;
+}
+
+.description {
+  font-weight: 600;
+}
+
+.login-form {
+  margin: auto;
+  width: 60%;
+}
+
+.login-input {
+  display: grid;
+  grid-template-columns: 150px 250px;
+  gap: 8px;
+  width: 50%;
+}
+
+.login-button {
+  margin-top: 10px;
+}
+
+.favorite-button {
+  border: 2px solid black;
+}
+
+.favorite {
+  background-image: url('../assets/favorite-background.avif');
+  border: 1px solid goldenrod;
+  border-radius: 4px;
+}
